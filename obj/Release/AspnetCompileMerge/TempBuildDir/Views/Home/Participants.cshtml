@@ -1,0 +1,24 @@
+﻿@model IEnumerable<FamilyCongress2015.Models.Participant>
+
+@{
+    ViewBag.Title = "Speakers/Participants";
+}
+
+<link rel="stylesheet" href="~/Content/participants.css" />
+
+<h2>Speakers/Participants</h2>
+
+<div id="content-placeholder" class="container" style="margin-top:20px;margin-bottom:20px;">
+    
+</div>
+
+<script type="text/javascript">
+    var url = '/home/GetJSONParticipants';
+    
+    $(document).ready(function () {
+        var jsonData = getContextData();
+        var context = $.parseJSON(jsonData);
+        var html = Handlebars.templates['profile'](context);
+        $("#content-placeholder").html(html);
+    })
+</script>

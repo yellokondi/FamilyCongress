@@ -1,0 +1,18 @@
+﻿@model FamilyCongress2015.Models.Article
+
+@{
+    ViewBag.Title = "Article";
+}
+
+<h2>Article</h2>
+
+<div class="container">
+    <div class="col-md-10 blogShort">
+        <h1>@Model.Title</h1>
+        <img src="@Model.ImageURI" alt="article image" class="pull-left img-responsive margin10 img-thumbnail" />
+        <article>
+            @Html.Raw(@Model.FullText)
+        </article>
+    </div>
+</div>
+<a class="btn btn-blog pull-right marginBottom10" href="@Url.Action("Index", "Home")">Back</a>

@@ -1,0 +1,10 @@
+﻿In order to precompile the templates.js file located in Precompiled
+folder, you need to do the following:
+
+- Open the command prompt (administrator mode)
+- Switch to project Templates folder via cd command
+- Type the following command:
+	handlebars <input files space delimited> -f Precompiled\templates.js
+
+This command will recreate templates.js file in Precompiled folder.
+Voila!

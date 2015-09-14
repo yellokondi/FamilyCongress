@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Family Congress - Chicago 2015";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <img src="~/Content/logo/logo_1.png" title="Strong Family Non-For-Profit" alt="Strong Family Non-For-Profit" class="logo" />
+            <h4 class="vcenter">
+                Family Congress of Polonia<br />
+                Chicago, Feb. 6 - 15, 2015<br /><br />
+                Faces of Love – Parents<br />
+                We are all called to love and educate
+            </h4>
+        </div>
+    </div>
+    <div id="blog" class="row">
+
+        <!-- Sidebar -->
+        <!--
+        <div class="col-sm-2 ">
+            <nav class="nav-sidebar">
+                <ul class="nav">
+                    <li class="@HelperView.ActiveItem("", "Home", null)"><a href="javascript:;"><span class="glyphicon glyphicon-star"></span> News</a></li>
+                    <li class="@HelperView.ActiveItem("", "Home", null)"><a href="javascript:;">Latest news</a></li>
+                    <li class="@HelperView.ActiveItem("", "Home", null)"><a href="javascript:;">Updates</a></li>
+                    <li class="nav-divider"></li>
+                </ul>
+
+            </nav>
+            <div><h2 class="ad">Place for your ad!</h2></div>
+            <div><h2 class="ad">Place for your ad!</h2></div>
+        </div>
+        -->
+               <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="EMNXM9UE5HXGW">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+                <!-- Blog Search box -->
+                <!--@using (Html.BeginForm("FindBlogs", "Home", FormMethod.Post))
+                {
+                    <div class="col-sm-4 pull-right">
+                        <h4><i class="fa fa-search"></i> Blog Search...</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="tags">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                }
+
+                -->
+                <!-- Blog entries -->
+                <div id="blog-placeholder"></div>
+
+                <div class="col-md-12 gap10">
+                    <p>Want to read more articles? Click <a href="/Home/Articles">here</a>.</p>
+                </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var url = '/home/GetJSONPosts';
+
+        $(document).ready(function () {
+            var jsonData = getContextData();
+            var context = $.parseJSON(jsonData);
+            var html = Handlebars.templates['post'](context);
+            $("#blog-placeholder").html(html);
+        })
+    </script>

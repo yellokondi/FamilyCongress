@@ -1,0 +1,12 @@
+﻿.logo {
+    float: left;
+    width: 150px;
+    height: auto;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-top: 27px;
+}

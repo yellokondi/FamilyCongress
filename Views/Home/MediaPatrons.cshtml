@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Media Patrons";
+}
+
+<h2>Media Patrons</h2>
+
+<div id="content-placeholder"></div>
+
+<script type="text/javascript">
+    var url = '/home/GetJSONCooperators?type=MediaPatron';
+
+    $(document).ready(function () {
+        var jsonData = getContextData();
+        var context = $.parseJSON(jsonData);
+        var html = Handlebars.templates['cooperator'](context);
+        $("#content-placeholder").html(html);
+    })
+</script>

@@ -1,0 +1,14 @@
+﻿@inherits FamilyCongress2015.App_Code.Helper
+@using System.Web.Mvc
+@using System.Web.Mvc.Html
+
+@helper ActiveItem(string actionName, string controllerName, string areaName)
+{
+    if (@Html.ViewContext.RouteData.Values["action"].ToString() == actionName &&
+        @Html.ViewContext.RouteData.Values["controller"].ToString() == controllerName &&
+        (@Html.ViewContext.RouteData.DataTokens["area"] == null || @Html.ViewContext.RouteData.DataTokens["area"].ToString() == areaName))
+    {
+        @:active
+    }
+}
+    

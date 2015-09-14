@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Program";
+}
+
+<h2>Program</h2>
+
+<h3>Congress ingredients are:</h3>
+
+<ul>
+    <li>Prayer</li>
+    <li>Retreat</li>
+    <li>Symposium</li>
+    <li>Conferences</li>
+    <li>Articles</li>
+</ul>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Participant Name</td>
+            <td>Where</td>
+            <td>When</td>
+            <td>Topic</td>
+            <td>Audience</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="content-placeholderEN"></tr>
+        <tr>
+            <td colspan="5">Homilies, conferences and symposiums in Polish:</td>
+        </tr>
+        <tr id="content-placeholderPL"></tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    var url = '/home/GetJSONProgram?language=English';
+
+    $(document).ready(function () {
+        var jsonData = getContextData();
+        var context = $.parseJSON(jsonData);
+        var html = Handlebars.templates['program'](context);
+        $("#content-placeholderEN").html(html);
+    })
+</script>
+

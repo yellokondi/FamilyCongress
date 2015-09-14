@@ -1,0 +1,22 @@
+﻿@model List<FamilyCongress2015.Models.FileInfo>
+
+@{
+    ViewBag.Title = "Downloads";
+}
+
+<h2>Downloads</h2>
+
+<table>
+    <tr>
+        <th>File Name</th>
+        <th>Link</th>
+    </tr>
+    @for (var i = 0; i <= Model.Count - 1; i++)
+    {
+        <tr>
+            <td>@Model[i].FileName</td>
+            <td>@Html.ActionLink("Download", "Download", new { filePath = @Model[i].FilePath, fileName = @Model[i].FileName })</td>
+        </tr>
+    }
+</table>
+

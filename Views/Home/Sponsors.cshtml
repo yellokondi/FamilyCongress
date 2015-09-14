@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Sponsors";
+}
+
+<h2>Sponsors</h2>
+
+<div id="content-placeholder"></div>
+
+<script type="text/javascript">
+    var url = '/home/GetJSONCooperators?type=Sponsor';
+
+    $(document).ready(function () {
+        var jsonData = getContextData();
+        var context = $.parseJSON(jsonData);
+        var html = Handlebars.templates['cooperator'](context);
+        $("#content-placeholder").html(html);
+    })
+</script>

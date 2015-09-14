@@ -1,0 +1,24 @@
+﻿{{#each Posts}}
+<div class="col-md-10 blogShort">
+    <h1>{{{Title}}}</h1>
+    <a href="{{FullArticleURL}}" class="thumbnail pull-left margin10">
+        <img src="{{ImageURI}}" alt="post image">
+    </a>
+    <article>
+        <p>
+            {{{Slug}}}
+        </p>
+    </article>
+    <p class="pull-left marginBottom10">
+        <i class="glyphicon glyphicon-user"></i> by <a href="#">{{UserName}}</a>
+        | <i class="glyphicon glyphicon-calendar"></i> {{CreatedOnDate}}
+        <!--| <i class="glyphicon glyphicon-comment"></i> 3 Comments
+        | <i class="glyphicon glyphicon-share"></i> <a href="#">39 Shares</a>-->
+        | <i class="glyphicon glyphicon-tags"></i> Tags :
+        {{#each Tags}}
+            <a href="{{TagURL}}"><span class="label label-info">{{TagName}}</span></a>
+        {{/each}}        
+    </p>
+    <a class="btn btn-blog pull-right marginBottom10" href="{{FullArticleURL}}">READ MORE</a>
+</div>
+{{/each}}

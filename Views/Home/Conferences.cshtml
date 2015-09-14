@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Conferences";
+}
+
+<h2>Conferences</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Participant Name</td>
+            <td>Where</td>
+            <td>When</td>
+            <td>Topic</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody id="content-placeholder"></tbody>
+</table>
+
+<script type="text/javascript">
+    var url = '/home/GetJSONConferences';
+
+    $(document).ready(function () {
+        var jsonData = getContextData();
+        var context = $.parseJSON(jsonData);
+        var html = Handlebars.templates['conference'](context);
+        $("#content-placeholder").html(html);
+    })
+</script>
