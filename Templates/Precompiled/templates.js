@@ -34,6 +34,46 @@ templates['conference'] = template({"1":function(depth0,helpers,partials,data) {
   if (stack1 != null) { buffer += stack1; }
   return buffer;
 },"useData":true});
+templates['cooperator'] = template({"1":function(depth0,helpers,partials,data) {
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  return "<div class=\"img-responsive\">\r\n    <a href=\""
+    + escapeExpression(((helper = (helper = helpers.SiteUrl || (depth0 != null ? depth0.SiteUrl : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"SiteUrl","hash":{},"data":data}) : helper)))
+    + "\" title=\""
+    + escapeExpression(((helper = (helper = helpers.SiteTitle || (depth0 != null ? depth0.SiteTitle : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"SiteTitle","hash":{},"data":data}) : helper)))
+    + "\" class=\"thumbnail\">\r\n        <img src=\""
+    + escapeExpression(((helper = (helper = helpers.LogoPath || (depth0 != null ? depth0.LogoPath : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"LogoPath","hash":{},"data":data}) : helper)))
+    + "\" alt=\""
+    + escapeExpression(((helper = (helper = helpers.ImageAlt || (depth0 != null ? depth0.ImageAlt : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"ImageAlt","hash":{},"data":data}) : helper)))
+    + "\" />\r\n    </a>\r\n</div>\r\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var stack1, buffer = "﻿";
+  stack1 = helpers.each.call(depth0, (depth0 != null ? depth0.Cooperators : depth0), {"name":"each","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
+  if (stack1 != null) { buffer += stack1; }
+  return buffer;
+},"useData":true});
+templates['event'] = template({"1":function(depth0,helpers,partials,data) {
+  var stack1, helper, functionType="function", helperMissing=helpers.helperMissing, buffer = "<tr>\r\n    <td>";
+  stack1 = ((helper = (helper = helpers.ParticipantName || (depth0 != null ? depth0.ParticipantName : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"ParticipantName","hash":{},"data":data}) : helper));
+  if (stack1 != null) { buffer += stack1; }
+  buffer += "</td>\r\n    <td>";
+  stack1 = ((helper = (helper = helpers.WhereAt || (depth0 != null ? depth0.WhereAt : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"WhereAt","hash":{},"data":data}) : helper));
+  if (stack1 != null) { buffer += stack1; }
+  buffer += "</td>\r\n    <td>";
+  stack1 = ((helper = (helper = helpers.When || (depth0 != null ? depth0.When : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"When","hash":{},"data":data}) : helper));
+  if (stack1 != null) { buffer += stack1; }
+  buffer += "</td>\r\n    <td>";
+  stack1 = ((helper = (helper = helpers.Topic || (depth0 != null ? depth0.Topic : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Topic","hash":{},"data":data}) : helper));
+  if (stack1 != null) { buffer += stack1; }
+  buffer += "</td>\r\n    <td>";
+  stack1 = ((helper = (helper = helpers.Audience || (depth0 != null ? depth0.Audience : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Audience","hash":{},"data":data}) : helper));
+  if (stack1 != null) { buffer += stack1; }
+  return buffer + "</td>\r\n</tr>\r\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var stack1, buffer = "﻿";
+  stack1 = helpers.each.call(depth0, (depth0 != null ? depth0.Event : depth0), {"name":"each","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
+  if (stack1 != null) { buffer += stack1; }
+  return buffer;
+},"useData":true});
 templates['post'] = template({"1":function(depth0,helpers,partials,data) {
   var stack1, helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, buffer = "<div class=\"col-md-10 blogShort\">\r\n    <h1>";
   stack1 = ((helper = (helper = helpers.Title || (depth0 != null ? depth0.Title : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Title","hash":{},"data":data}) : helper));
@@ -82,46 +122,6 @@ templates['profile'] = template({"1":function(depth0,helpers,partials,data) {
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var stack1, buffer = "﻿";
   stack1 = helpers.each.call(depth0, (depth0 != null ? depth0.Participants : depth0), {"name":"each","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
-  if (stack1 != null) { buffer += stack1; }
-  return buffer;
-},"useData":true});
-templates['cooperator'] = template({"1":function(depth0,helpers,partials,data) {
-  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
-  return "<div class=\"img-responsive\">\r\n    <a href=\""
-    + escapeExpression(((helper = (helper = helpers.SiteUrl || (depth0 != null ? depth0.SiteUrl : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"SiteUrl","hash":{},"data":data}) : helper)))
-    + "\" title=\""
-    + escapeExpression(((helper = (helper = helpers.SiteTitle || (depth0 != null ? depth0.SiteTitle : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"SiteTitle","hash":{},"data":data}) : helper)))
-    + "\" class=\"thumbnail\">\r\n        <img src=\""
-    + escapeExpression(((helper = (helper = helpers.LogoPath || (depth0 != null ? depth0.LogoPath : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"LogoPath","hash":{},"data":data}) : helper)))
-    + "\" alt=\""
-    + escapeExpression(((helper = (helper = helpers.ImageAlt || (depth0 != null ? depth0.ImageAlt : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"ImageAlt","hash":{},"data":data}) : helper)))
-    + "\" />\r\n    </a>\r\n</div>\r\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-  var stack1, buffer = "﻿";
-  stack1 = helpers.each.call(depth0, (depth0 != null ? depth0.Cooperator : depth0), {"name":"each","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
-  if (stack1 != null) { buffer += stack1; }
-  return buffer;
-},"useData":true});
-templates['event'] = template({"1":function(depth0,helpers,partials,data) {
-  var stack1, helper, functionType="function", helperMissing=helpers.helperMissing, buffer = "<tr>\r\n    <td>";
-  stack1 = ((helper = (helper = helpers.ParticipantName || (depth0 != null ? depth0.ParticipantName : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"ParticipantName","hash":{},"data":data}) : helper));
-  if (stack1 != null) { buffer += stack1; }
-  buffer += "</td>\r\n    <td>";
-  stack1 = ((helper = (helper = helpers.WhereAt || (depth0 != null ? depth0.WhereAt : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"WhereAt","hash":{},"data":data}) : helper));
-  if (stack1 != null) { buffer += stack1; }
-  buffer += "</td>\r\n    <td>";
-  stack1 = ((helper = (helper = helpers.When || (depth0 != null ? depth0.When : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"When","hash":{},"data":data}) : helper));
-  if (stack1 != null) { buffer += stack1; }
-  buffer += "</td>\r\n    <td>";
-  stack1 = ((helper = (helper = helpers.Topic || (depth0 != null ? depth0.Topic : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Topic","hash":{},"data":data}) : helper));
-  if (stack1 != null) { buffer += stack1; }
-  buffer += "</td>\r\n    <td>";
-  stack1 = ((helper = (helper = helpers.Audience || (depth0 != null ? depth0.Audience : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Audience","hash":{},"data":data}) : helper));
-  if (stack1 != null) { buffer += stack1; }
-  return buffer + "</td>\r\n</tr>\r\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-  var stack1, buffer = "﻿";
-  stack1 = helpers.each.call(depth0, (depth0 != null ? depth0.Event : depth0), {"name":"each","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
   if (stack1 != null) { buffer += stack1; }
   return buffer;
 },"useData":true});
