@@ -52,3 +52,42 @@ GETUTCDATE(),
 NULL,
 NULL)
 --End of Press Releases
+
+INSERT INTO Articles(Title, ImageURI, [FullText], CreatedOn)
+VALUES('Press Release','/Content/article_images/press_release_III.jpg',
+N'We are announcing the Third Family Congress of Polonia, Chicago 2015
+<br /><br />
+<a href="http://www.familycongresschicago.org">www.familycongresschicago.org</a> | <a href="https://www.facebook.com/KongresRodziny">www.facebook.com/KongresRodziny</a><br />
+<a href="mailto:info@familycongresschicago.org">info@familycongresschicago.org</a><br />
+Tel: 773-414-5461<br />
+<br /><br />
+The Third Family Congress of Polonia in Chicago will take place on Nov. 19-22, 2015. The time will be devoted to workshop meetings, conferences, and prayers. Invitation to participate is extended to all people, those from single-person as well as those from multi-person families, living happily, or going through difficulties or crisis.
+<br /><br />
+We will be reflecting and praying over the subject: Wounded – Healed in Love. The organizers hope that many people will actively participate in the workshops and prayer meetings, and they believe that God, who is LOVE, will comfort everyone who feels wounded, lost, or guilty in their relations towards love.
+<br /><br />
+Love is a great gift from God to us. Life thrives thanks to love. The lack of love or its distortion cause disturbance in development, unhappiness, and destroy interpersonal relations. Love applied correctly is the basis for healing from different types of wounds. Love is a psychological and spiritual experience, but its presence or lack of thereof inflicts also the body. That is why the presence of love in one’s life transcends his/her whole existence and contributes to the person''s wholesome development. Its distortion or lack has consequences in all areas of human life.
+<br /><br />
+The Congress is organized by the initiative of lay members of the Strong Family Foundation under the auspices of the Chicago Archbishop Blase J. Cupich, in cooperation with the Executive Director of the Catholic League for Religious Assistance to Poland and Polonia, Bishop Andrzej P. Wypych, and the Deputy Archbishop to Polonia, Rev. Robert Fedek. The spiritual leader of this beautiful endeavor is Father Jerzy Karpinski. Voluntary assistance is also provided by members of the Support Group for Difficult Marriages SYCHAR, House Church, and the office of Ministry for Archdiocesan Families.
+<br /><br />
+The program of the Congress has been prepared to provide something valuable for everyone in prayer meetings, conferences and workshops. The presentations will be mainly in Polish, and selected ones also in English.  
+<br /><br />
+Renowned experts in their fields have been invited to speak at the Congress. The main speaker is Professor Father Romuald Jaworski from Poland. Other speakers in alphabetical order will be as follows: Fr. Paweł Bandurski, Halina and Jerzy Florczyk, s. Maksymiliana Kamiń ska, Fr. Piotr Kochanowicz, Robert Lawler, Małgorzata Olczak, Fr. Tomasz Oleniacz, Rev. Piotr Samborski, Kamila Smyk-Jaworska, Fr. Paweł Witon, Rev. Michał Wyrzykowski. 
+<br /><br />
+Ewa Kozioł<br />
+Congress Organizer',
+GETUTCDATE())
+
+
+INSERT INTO Blogs(Title, ImageURI, Slug, UserName, FullArticleURL, CreatedOn, Comments, Shares)
+VALUES('Press Release', '/Content/article_images/press_release_III.jpg', 
+N'The Third Family Congress of Polonia in Chicago will take place on Nov. 19-22, 2015. The time will be devoted to workshop meetings, conferences, and prayers.
+Invitation to participate is extended to all people, those from single-person as well as those from multi-person families, living happily, or going through difficulties or crisis.
+We will be reflecting and praying over the subject: Wounded – Healed in Love.
+The Congress is organized by the initiative of lay members of the Strong Family Foundation under the auspices of the Chicago Archbishop Blase J. Cupich.
+The presentations will be mainly in Polish, and selected ones also in English.
+Renowned experts in their fields have been invited to speak at the Congress. The main speaker is Professor Father Romuald Jaworski from Poland.',
+'Jerzy',
+'/Home/Article?id=',
+GETUTCDATE(),
+NULL,
+NULL)
