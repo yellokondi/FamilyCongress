@@ -1,0 +1,31 @@
+﻿<div class="container">
+	<h2>{{Subject}}</h2>
+	<h3>{{Instructor}}</h3>
+	<div>
+		<div class="row">
+			<div>
+				<h4>Place:</h4>
+				<p>{{{Place}}}</p><br />
+				<h4>Meets On</h4>
+				<p>{{{MeetOn}}}</p><br />
+				<h4>Workshop Presentation</h4>
+				<p>{{{Definition}}}</p><br />
+				<h4>Main Topic and Audience</h4>
+				<p>
+					{{{Description}}}
+				</p><br />
+				<h4>Participation Rules</h4>
+				<p>
+					{{{Rules}}}
+				</p><br />
+				<h4>Items Included</h4>
+				<p>
+					{{{Help}}}
+				</p><br />
+				{{#if RegisterUrl}}
+				<a href="{{RegisterUrl}}" class="btn btn-lg btn-primary">Submit</a>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</div>
