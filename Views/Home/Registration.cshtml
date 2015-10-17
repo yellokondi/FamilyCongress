@@ -1,0 +1,57 @@
+﻿@model FamilyCongress2015.Models.RegistrationForm
+
+@{
+	ViewBag.Title = "Registration";
+}
+@Scripts.Render("~/bundles/rejestracja")
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+			@using (Html.BeginForm()) 
+			{
+				@Html.AntiForgeryToken()
+				<h2>Registration</h2>
+				<hr class="colorgraph">
+				<div class="form-group">
+					@Html.TextBoxFor(m=>m.LabName,new {@class="form-control input-lg", @readonly="readonly", @placeholder=@ViewBag.LabName, @tabindex=1 })
+					@Html.ValidationMessageFor(m=>m.LabName)
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="form-group">
+							@Html.TextBoxFor(m=>m.FirstName,new {@class="form-control input-lg", @placeholder="First Name", @tabindex=2 })
+							@Html.ValidationMessageFor(m=>m.FirstName)
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="form-group">
+							@Html.TextBoxFor(m=>m.LastName,new {@class="form-control input-lg", @placeholder="Last Name", @tabindex=3 })
+							@Html.ValidationMessageFor(m=>m.LastName)
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					@Html.TextBoxFor(m=>m.Email,new {@class="form-control input-lg", @placeholder="Email Address", @tabindex=4 })
+					@Html.ValidationMessageFor(m=>m.Email)
+				</div>
+				<div class="form-group">
+					@Html.TextBoxFor(m=>m.Telephone,new {@class="form-control input-lg", @placeholder="Telephone Number", @tabindex=5 })
+					@Html.ValidationMessageFor(m=>m.Telephone)
+				</div>			
+				<hr class="colorgraph">
+				<div class="row">
+					<div class="col-xs-12 col-md-6"><input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg" tabindex="6"></div>
+					<div class="col-xs-12 col-md-6"><a href="@Url.Action("Workshops", "Home", new { labName = ViewBag.LabName })" class="btn btn-success btn-block btn-lg" tabindex="7">Back</a></div>
+				</div>
+				<div class="row">
+					<p>If you fill it out and send the form, it does not mean you are enrolled in workshops. You need to wait until you receive a reply which will include a registration confirmation.</p>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}

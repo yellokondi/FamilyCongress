@@ -1,0 +1,18 @@
+﻿@model FamilyCongress2015.Models.Workshop
+
+@{
+	ViewBag.Title = "Workshops";
+}
+
+<div id="content-placeholder"></div>
+
+<script type="text/javascript">
+	var url = '/home/GetJSONWorkshop?labName=@ViewBag.LabName';
+
+	$(document).ready(function () {
+		var jsonData = getContextData();
+		var context = $.parseJSON(jsonData);
+		var html = Handlebars.templates['workshop'](context);
+		$("#content-placeholder").html(html);
+	})
+</script>

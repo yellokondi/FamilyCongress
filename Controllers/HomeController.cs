@@ -9,6 +9,8 @@ using Newtonsoft.Json;
 using DropNet;
 using DropNet.Models;
 using DropNet.Exceptions;
+using System.Net.Mail;
+using System.Net;
 
 namespace FamilyCongress2015.Controllers
 {
@@ -18,15 +20,13 @@ namespace FamilyCongress2015.Controllers
 		private static string DropBoxAccessToken = "U_IaYulTQ4YAAAAAAAACrwasLc3NcTLom1FnxpPZ1zE6I5hh_EFMTlTpzYd95TGH";
 		private static string DropBoxApiKey="srxkms5181bo1kj";
 		private static string DropBoxApiSecret = "9n2000p9utgrwx5";
-		//private static string UserSecret = "fMth1ku1lnBRsn3a";
-		//private static string UserToken = "XtlFq3zs8dnYK46F"; DropBoxAccessToken
 		private DropNetClient _dropBoxClient = new DropNetClient(DropBoxApiKey, DropBoxApiSecret, DropBoxAccessToken, null);
 
 		private string DropBoxDownloadBasePath
 		{
 			get
 			{
-				return "KONGRES 2015/Download";
+				return "KONGRES 2015 listopad download/download - do pobrania";
 			}
 		}
 		#endregion
@@ -71,9 +71,18 @@ namespace FamilyCongress2015.Controllers
 
 		public ActionResult Contact()
 		{
-			ViewBag.Message = "Your contact page.";
-
 			return View();
+		}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult Contact(ContactUs model)
+		{
+			if (ModelState.IsValid)
+			{
+				SendFeedback(model);
+			}
+			return View(model);
 		}
 
 		public ActionResult Sponsors()
@@ -126,6 +135,37 @@ namespace FamilyCongress2015.Controllers
 		//Retreat page
 		public ActionResult Retreat()
 		{
+			return View();
+		}
+
+		public ActionResult Registration(String labName)
+		{
+			ViewBag.LabName = labName;
+			return View();
+		}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult Registration(RegistrationForm model)
+		{
+			if (ModelState.IsValid)
+			{
+				SendRegistratioMessage(model);
+			}
+			return View(model);
+		}
+
+		public ActionResult Sent()
+		{
+			return View();
+		}
+
+		public ActionResult Workshops(String labName, String subject, String instructor)
+		{
+			ViewBag.LabName = labName;
+			ViewBag.Subject = subject;
+			ViewBag.Instructor = instructor;
+
 			return View();
 		}
 
@@ -262,6 +302,14 @@ WHERE bt.BlogID = {0}";
 
 			return jsonData.Data.ToString();
 		}
+
+		public String GetJSONWorkshop(String labName)
+		{
+			Workshop workshop = SqlFuDAL.FindWorkshopByLabName(labName);
+			String json = JsonConvert.SerializeObject(workshop);
+			JsonResult jsonData = new JsonResult { Data = JsonConvert.DeserializeObject(json) };
+			return jsonData.Data.ToString();
+		}
 		#endregion
 
 		public ActionResult FindBlogs(string tags)
@@ -281,5 +329,69 @@ WHERE bt.BlogID = {0}";
 			}
 			return View(blogs);
 		}
+
+		#region Send Message Methods
+		private RedirectToRouteResult SendRegistratioMessage(RegistrationForm model)
+		{
+			var body = @"<p>Workshop Title: {0}</p>
+<p>First Name: {1}</p>
+<p>Last Name: {2}</p>
+<p>Email Address: {3}</p>
+<p>Telephone Number: {4}</p>";
+
+			var message = new MailMessage();
+			message.To.Add(new MailAddress("info@kongresrodzinychicago.org"));
+			message.From = new MailAddress("web@kongresrodzinychicago.org");
+			message.Subject = String.Format("{0} {1} wants to register for: {2}.", model.FirstName, model.LastName, model.LabName);
+			message.Body = String.Format(body, model.LabName, model.FirstName, model.LastName, model.Email, model.Telephone);
+			message.IsBodyHtml = true;
+
+			using (var smtp = new SmtpClient())
+			{
+				var credential = new NetworkCredential
+				{
+					UserName = "web@kongresrodzinychicago.org",
+					Password = "mikonik44"
+				};
+				smtp.Credentials = credential;
+				smtp.Host = "smtp.kongresrodzinychicago.org";
+				smtp.Port = 587;
+				smtp.EnableSsl = false;
+				smtp.Send(message);
+				return RedirectToAction("Sent");
+			}
+		}
+
+		private RedirectToRouteResult SendFeedback(ContactUs model)
+		{
+			var body = @"<p>Feedback: {0}</p>
+<p>First Name: {1}</p>
+<p>Last Name: {2}</p>
+<p>Email Address: {3}</p>
+<p>Telephone Number: {4}</p>";
+
+			var message = new MailMessage();
+			message.To.Add(new MailAddress("info@kongresrodzinychicago.org"));
+			message.From = new MailAddress("web@kongresrodzinychicago.org");
+			message.Subject = String.Format("{0} {1} wants to sent a feedback", model.FirstName, model.LastName);
+			message.Body = String.Format(body, model.Comment, model.FirstName, model.LastName, model.Email, model.Telephone);
+			message.IsBodyHtml = true;
+
+			using (var smtp = new SmtpClient())
+			{
+				var credential = new NetworkCredential
+				{
+					UserName = "web@kongresrodzinychicago.org",
+					Password = "mikonik44"
+				};
+				smtp.Credentials = credential;
+				smtp.Host = "smtp.kongresrodzinychicago.org";
+				smtp.Port = 587;
+				smtp.EnableSsl = false;
+				smtp.Send(message);
+				return RedirectToAction("Sent");
+			}
+		}
+		#endregion
 	}
 }
