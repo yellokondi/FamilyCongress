@@ -779,6 +779,9 @@
     <Content Include="Templates\profile.hbs.js">
       <DependentUpon>profile.handlebars</DependentUpon>
     </Content>
+    <Content Include="Templates\workshop.hbs.js">
+      <DependentUpon>workshop.handlebars</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -815,6 +818,7 @@
     <Content Include="Templates\conference.handlebars" />
     <Content Include="Templates\cooperator.handlebars" />
     <Content Include="Templates\event.handlebars" />
+    <Content Include="Templates\workshop.handlebars" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
