@@ -794,7 +794,9 @@
     <Content Include="Templates\profile.hbs.js">
       <DependentUpon>profile.handlebars</DependentUpon>
     </Content>
-    <Content Include="Templates\workshop.hbs.js" />
+    <Content Include="Templates\workshop.hbs.js">
+      <DependentUpon>workshop.handlebars</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
