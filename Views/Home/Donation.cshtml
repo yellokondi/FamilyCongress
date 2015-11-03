@@ -1,0 +1,56 @@
+﻿
+@{
+	ViewBag.Title = "Donation";
+}
+
+<h4>
+	@if (ViewBag.FromRegistration)
+	{
+		<p>
+			Please support the foundation Strong Family, the main organizer and sponsor of diverse events, includingthe Family Congress of Polonia. Strong Family is a non-for-profit charitable and religious organization; therefore, the donors are provided with a tax deductible receipt accepted by the IRS.
+			<br /><br />
+			Any donations are welcome!
+			<br /><br />
+			Contributions can be made by check written to “Strong Family” and mailed to: Strong Family, 4105 N. Avers Ave., Chicago, IL 60618. Credit card or Paypal payments are also accepted, click: Donate.
+			<br /><br />
+			In case of registering for all workshops (except for the listed below), the foundation Strong Family is encouraging the following donations:<br />
+			recommended amount: $30, friend donation: $50, sponsor donation: $___
+		</p>
+		<ul>
+			<li>
+				For workshop “Retreat for Marriages” – donation $450 per couple, or $200 deposit.
+			</li>
+			<li>
+				For workshop “Hurt yet Healed in Love” – donation $60 per couple
+			</li>
+			<li>
+				For workshop “Seven Secrets of Effective Fatherhood” – donation $80 per person
+			</li>
+		</ul>
+		<p>
+			The foundation Strong Family is thankful for your support and participation in the Third Family Congress of Polonia. We ask for your patience while we process registrations, your confirmation will be sent to the provided email soon.
+		</p>
+	}
+	else
+	{
+		<p>
+			Please support the foundation Strong Family, the main organizer and sponsor of diverse events, includingthe Family Congress of Polonia. Strong Family is a non-for-profit charitable and religious organization; therefore, the donors are provided with a tax deductible receipt accepted by the IRS.
+			<br /><br />
+			Any donations are welcome!
+			<br /><br />
+			Contributions can be made by check written to “Strong Family” and mailed to: Strong Family, 4105 N. Avers Ave., Chicago, IL 60618. Credit card or Paypal payments are also accepted, click: Donate.
+			<br /><br />
+			The foundation Strong Family is encouraging the following donations:<br />
+			recommended amount: $30, friend donation: $50, sponsor donation: $___
+		</p>
+	}
+
+</h4>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="EMNXM9UE5HXGW">
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+

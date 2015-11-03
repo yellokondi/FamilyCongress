@@ -1,47 +1,277 @@
 ﻿
 @{
-    ViewBag.Title = "Program";
+	ViewBag.Title = "Program";
 }
 
-<h2>Program</h2>
-
-<h3>Congress ingredients are:</h3>
-
-<ul>
-    <li>Prayer</li>
-    <li>Retreat</li>
-    <li>Symposium</li>
-    <li>Conferences</li>
-    <li>Articles</li>
-</ul>
 
 <table class="table">
-    <thead>
-        <tr>
-            <td>Participant Name</td>
-            <td>Where</td>
-            <td>When</td>
-            <td>Topic</td>
-            <td>Audience</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr id="content-placeholderEN"></tr>
-        <tr>
-            <td colspan="5">Homilies, conferences and symposiums in Polish:</td>
-        </tr>
-        <tr id="content-placeholderPL"></tr>
-    </tbody>
+	<thead>
+		<tr>
+			<td>Date</td>
+			<td>Time</td>
+			<td>Place</td>
+			<td>Event</td>
+			<td>Topic/Subject</td>
+			<td>Speaker/Leader</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				Thursday, November 19th
+			</td>
+			<td>
+				7pm
+			</td>
+			<td>
+				Shrine of the Sacred Heart Jesuit Millennium Center - Polish Jesuit Fathers
+			</td>
+			<td>
+				Holy Mass and Grand opening of the Congress
+			</td>
+			<td></td>
+			<td>
+				Bishop Andrzej P. Wypych
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Friday, November 20th
+			</td>
+			<td>
+				7pm
+			</td>
+			<td>
+				Divine Mercy Polish Mission in Lombard
+			</td>
+			<td>
+				Penitential Devotion
+			</td>
+			<td>
+				Wounded yet healed by love.
+			</td>
+			<td>
+				Fr. Michał Wyrzykowski
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				7pm
+			</td>
+			<td>
+				St. Ladislaus Church
+			</td>
+			<td>
+				Penitential Devotion
+			</td>
+			<td>
+				Wounded yet healed by love.
+			</td>
+			<td>
+				Fr. Piotr Samborski
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				7pm
+			</td>
+			<td>
+				Our Lady Mother of the Church Polish Mission
+			</td>
+			<td>
+				Penitential Devotion
+			</td>
+			<td>
+				Wounded yet healed by love.
+			</td>
+			<td>
+				Fr. Tomasz Oleniacz
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				7pm
+			</td>
+			<td>
+				Shrine of the Sacred Heart Jesuit Millennium Center - Polish Jesuit Fathers
+			</td>
+			<td>
+				Holy Mass
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				7:40pm
+			</td>
+			<td></td>
+			<td>
+				Conference (transmission via radio WCEV 1450 AM)
+			</td>
+			<td>
+				Wounded yet healed by love.
+			</td>
+			<td>
+				Fr. Romuald Jaworski
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>8 - 10pm</td>
+			<td>
+				St. Daniel The Prophet Church
+			</td>
+			<td>
+				Workshops for man, fathers part 1
+			</td>
+			<td>
+				Seven secrets of effective fatherhood Session I
+			</td>
+			<td>
+				Tato-net
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Saturday, November 21st
+			</td>
+			<td>
+				9am – 1pm
+			</td>
+			<td>
+				Shrine of the Sacred Heart Jesuit Millennium Center - Polish Jesuit Fathers
+			</td>
+			<td>
+				Workshops
+			</td>
+			<td>
+				Bibliodrama: Family in Holly Bible – Holly Bible in family.
+			</td>
+			<td>
+				Fr. Romuald Jaworski
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				9am – 1pm
+			</td>
+			<td>
+				St. Ferdinand Church
+			</td>
+			<td>Workshops in English</td>
+			<td><a href="@Url.Action("Workshops", "Home", new { labName = "Hurt yet Healed in Love", subject = "Wounded yet healed by love. Combating the contraceptive mentality in modern society.", instructor = "Dr Robert Lawler" })">Wounded yet healed by love. Combating the contraceptive mentality in modern society.</a></td>
+			<td>Dr Robert Lawler</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>9:30am-6:30pm</td>
+			<td>
+				Kings Hall Lombard
+			</td>
+			<td>Workshops for couples and married couples</td>
+			<td>Wounded yet healed by love.</td>
+			<td>Fr. Paweł Bandurski</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>10am – 1pm</td>
+			<td>St. Hyacinth Basilica</td>
+			<td>Workshops</td>
+			<td>Forbidden sadness.</td>
+			<td>Sr. Maksymiliana</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>8am – 5pm</td>
+			<td>St. Daniel The Prophet Church</td>
+			<td>Workshops  for man, fathers part 2</td>
+			<td>Seven secrets of effective fatherhood Session II</td>
+			<td>Tato-net</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>9am – 1pm</td>
+			<td>St. Thomas Becket Church, Mt Prospect</td>
+			<td>Workshops</td>
+			<td>How to love, when tears are coming down (a few words about difficult love).</td>
+			<td>Małgorzata Olczak</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3pm – 7pm</td>
+			<td>St. Constance Church</td>
+			<td>Workshops</td>
+			<td>How to love when tears are coming down (a few words about difficult love).</td>
+			<td>Małgorzata Olczak</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>4pm – 8pm</td>
+			<td>Shrine of the Sacred Heart Jesuit Millennium Center - Polish Jesuit Fathers</td>
+			<td>Workshops</td>
+			<td>Family conflicts in the light of Transactional Analysis.</td>
+			<td>Fr. Romuald Jaworski</td>
+		</tr>
+		<tr>
+			<td>Sunday, November 22nd</td>
+			<td>
+				8am - 8:30am
+			</td>
+			<td>Shrine of the Sacred Heart Jesuit Millennium Center - Polish Jesuit Fathers</td>
+			<td>
+				Holy Mass - Conference (transmission via radio WCEV 1450 AM and1030 AM)
+			</td>
+			<td></td>
+			<td>Fr. Romuald Jaworski</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>11am – 1pm</td>
+			<td>Shrine of the Sacred Heart Jesuit Millennium Center - Polish Jesuit Fathers</td>
+			<td>Panel</td>
+			<td>Finally alive. 12 steps toward living a full life.</td>
+			<td>Fr. Romuald Jaworski</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3pm</td>
+			<td>St. Bruno Church</td>
+			<td>
+				Holly Mass<br />
+				Conference<br />
+				Official closing of The Third Family Congress of Polonia
+			</td>
+			<td></td>
+			<td>
+				Archbishop Blase Cupich<br />
+				Fr. Robert Fedek<br />
+				Fr. Romuald Jaworski
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Friday - Sunday, November 20th-22nd
+			</td>
+			<td>
+				From 5pm - Friday<br />
+				until 3pm - Sunday
+			</td>
+			<td>Mundelein</td>
+			<td>
+				Workshops for married couples (three days in Mundelein)
+			</td>
+			<td>Marriage Encounter</td>
+			<td>
+				Halina i Jerzy Florczyk<br />
+				Fr. Paweł Witon
+			</td>
+		</tr>
+	</tbody>
 </table>
-
-<script type="text/javascript">
-    var url = '/home/GetJSONProgram?language=English';
-
-    $(document).ready(function () {
-        var jsonData = getContextData();
-        var context = $.parseJSON(jsonData);
-        var html = Handlebars.templates['program'](context);
-        $("#content-placeholderEN").html(html);
-    })
-</script>
 

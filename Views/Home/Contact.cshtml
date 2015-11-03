@@ -3,7 +3,6 @@
 @{
 	ViewBag.Title = "Contact Us";
 }
-<h2>@ViewBag.Title.</h2>
 
 <div class="container">
 	<div class="row">
@@ -11,9 +10,9 @@
 			<b>Strong Family<br />
 			4105 N Avers Ave<br />
 			Chicago, IL 60618</b><br /><br />
-			<abbr title="Telefon">Tel:</abbr>
+			<abbr title="Telephone">Tel:</abbr>
 			773-414-5461<br />
-			Email: <a href="mailto:info@kongressrodzinychicago.org">info@kongressrodzinychicago.org</a>
+			Email: <a href="mailto:info@familycongresschicago.org">info@familycongresschicago.org</a>
 		</address>
 	</div>
 	<div class="row">
@@ -21,22 +20,21 @@
 		@using (Html.BeginForm()) 
 		{
 			@Html.AntiForgeryToken()
-			<h2>Napisz do nas</h2>
 			<hr class="colorgraph">
 			<div class="form-group">
-				@Html.TextAreaFor(m=>m.Comment,new {@class="form-control input-lg", @placeholder="Proszę, podziel się z nami swoimi myślami...", @tabindex=1 })
+				@Html.TextAreaFor(m=>m.Comment,new {@class="form-control input-lg", @placeholder="Share your thoughts with us...", @tabindex=1 })
 				@Html.ValidationMessageFor(m=>m.Comment)
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-6">
 					<div class="form-group">
-						@Html.TextBoxFor(m=>m.FirstName,new {@class="form-control input-lg", @placeholder="Imię", @tabindex=2 })
+						@Html.TextBoxFor(m=>m.FirstName,new {@class="form-control input-lg", @placeholder="First Name", @tabindex=2 })
 						@Html.ValidationMessageFor(m=>m.FirstName)
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-6">
 					<div class="form-group">
-						@Html.TextBoxFor(m=>m.LastName,new {@class="form-control input-lg", @placeholder="Nazwisko", @tabindex=3 })
+						@Html.TextBoxFor(m=>m.LastName,new {@class="form-control input-lg", @placeholder="Last Name", @tabindex=3 })
 						@Html.ValidationMessageFor(m=>m.LastName)
 					</div>
 				</div>
@@ -51,8 +49,8 @@
 			</div>			
 			<hr class="colorgraph">
 			<div class="row">
-				<div class="col-xs-12 col-md-6"><input type="submit" value="Wyślij" class="btn btn-primary btn-block btn-lg" tabindex="6"></div>
-				<div class="col-xs-12 col-md-6"><a href="@Url.Action("Index", "Home")" class="btn btn-success btn-block btn-lg" tabindex="7">Wróć</a></div>
+				<div class="col-xs-12 col-md-6"><input type="submit" value="Send" class="btn btn-primary btn-block btn-lg" tabindex="6"></div>
+				<div class="col-xs-12 col-md-6"><a href="@Url.Action("Index", "Home")" class="btn btn-success btn-block btn-lg" tabindex="7">Back</a></div>
 			</div>
 		}
 	</div>

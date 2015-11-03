@@ -115,9 +115,7 @@ namespace FamilyCongress2015.Controllers
 		//Participants page
 		public ActionResult Participants()
 		{
-			List<Participant> participants = new List<Participant>();
-
-			return View(participants);
+			return View();
 		}
 
 		//Places page
@@ -191,7 +189,13 @@ namespace FamilyCongress2015.Controllers
 			List<Article> articles = SqlFuDAL.FindObjectsByType<Article>();
 			return View(articles);
 		}
-		
+
+		public ActionResult Donation(Boolean fromRegistration = false)
+		{
+			ViewBag.FromRegistration = fromRegistration;
+			return View();
+		}
+
 		public ActionResult Article(int id)
 		{
 			Article article = SqlFuDAL.FindArticleById(id);
@@ -340,8 +344,8 @@ WHERE bt.BlogID = {0}";
 <p>Telephone Number: {4}</p>";
 
 			var message = new MailMessage();
-			message.To.Add(new MailAddress("info@kongresrodzinychicago.org"));
-			message.From = new MailAddress("web@kongresrodzinychicago.org");
+			message.To.Add(new MailAddress("info@familycongresschicago.org"));
+			message.From = new MailAddress("web@familycongresschicago.org");
 			message.Subject = String.Format("{0} {1} wants to register for: {2}.", model.FirstName, model.LastName, model.LabName);
 			message.Body = String.Format(body, model.LabName, model.FirstName, model.LastName, model.Email, model.Telephone);
 			message.IsBodyHtml = true;
@@ -350,15 +354,15 @@ WHERE bt.BlogID = {0}";
 			{
 				var credential = new NetworkCredential
 				{
-					UserName = "web@kongresrodzinychicago.org",
-					Password = "mikonik44"
+					UserName = "web@familycongresschicago.org",
+					Password = "strong_family"
 				};
 				smtp.Credentials = credential;
-				smtp.Host = "smtp.kongresrodzinychicago.org";
+				smtp.Host = "smtp.familycongresschicago.org";
 				smtp.Port = 587;
 				smtp.EnableSsl = false;
 				smtp.Send(message);
-				return RedirectToAction("Sent");
+				return RedirectToAction("Donation", "Home", new { FromRegistration = true });
 			}
 		}
 
@@ -371,8 +375,8 @@ WHERE bt.BlogID = {0}";
 <p>Telephone Number: {4}</p>";
 
 			var message = new MailMessage();
-			message.To.Add(new MailAddress("info@kongresrodzinychicago.org"));
-			message.From = new MailAddress("web@kongresrodzinychicago.org");
+			message.To.Add(new MailAddress("info@familycongresschicago.org"));
+			message.From = new MailAddress("web@familycongresschicago.org");
 			message.Subject = String.Format("{0} {1} wants to sent a feedback", model.FirstName, model.LastName);
 			message.Body = String.Format(body, model.Comment, model.FirstName, model.LastName, model.Email, model.Telephone);
 			message.IsBodyHtml = true;
@@ -381,11 +385,11 @@ WHERE bt.BlogID = {0}";
 			{
 				var credential = new NetworkCredential
 				{
-					UserName = "web@kongresrodzinychicago.org",
-					Password = "mikonik44"
+					UserName = "web@familycongresschicago.org",
+					Password = "strong_family"
 				};
 				smtp.Credentials = credential;
-				smtp.Host = "smtp.kongresrodzinychicago.org";
+				smtp.Host = "smtp.familycongresschicago.org";
 				smtp.Port = 587;
 				smtp.EnableSsl = false;
 				smtp.Send(message);

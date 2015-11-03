@@ -91,3 +91,26 @@ Renowned experts in their fields have been invited to speak at the Congress. The
 GETUTCDATE(),
 NULL,
 NULL)
+
+INSERT INTO Articles(Title, ImageURI, [FullText], CreatedOn)
+VALUES('WOUNDED YET HEALED BY LOVE. COMBATING THE CONTRACEPTIVE MENTALITY IN MODERN SOCIETY','/Content/default_blog_image/default_document.png',
+'In today’s modern society, there is an increasing pressure to conform to the status quo, especially when in comes to reproductive health.  These pressures typically center on abortion, contraception and abusive relationships.  I would first like to define the problems that confront so many single and married women in our country and I would like to show how many of them are correlated.  I then would like to offer strategies to help combat these problems.  One strategy is to chart the menstrual cycle and use it for diagnosis and tailoring the treatment.  I will include a brief introduction to NaProTECHNOLOGY developed at the Pope Paul VI Institute in Omaha.<br /><br />
+Many women today find themselves pressured either by the medical community or their significant others to embrace the contraceptive mentality, which includes the acceptance of IVF and abortion.  I want to let these women know that there is a healthier way of achieving and avoiding pregnancy, one that is morally and ethically superior.<br /><br />
+Topics to be covered:<br />
+<ol>
+<li>Infertility as a cross to bear</li>
+<li>Subculture (depression, suicidal thoughts, infertility)</li>
+<li>Abortion and contraception</li>
+<li>Intro to NaProTECHNOLOGY</li>
+</ol>
+These interesting workshops are part of Third Family Congress of Polonia, it is going to take place in Saint Ferdinand Church at 9am-1pm on Saturday, November 21st. Registration for these workshops are required, for more information visit <a href="http://www.familycongresschicago.org">www.familycongresschicago.org</a>',
+GETUTCDATE())
+
+INSERT INTO Blogs(Title, ImageURI, Slug, UserName, FullArticleURL, CreatedOn, Comments, Shares)
+VALUES('WOUNDED YET HEALED BY LOVE. COMBATING THE CONTRACEPTIVE MENTALITY IN MODERN SOCIETY','/Content/default_blog_image/default_document.png',
+'In today’s modern society, there is an increasing pressure to conform to the status quo, especially when in comes to reproductive health.  These pressures typically center on abortion, contraception and abusive relationships.  I would first like to define the problems that confront so many single and married women in our country and I would like to show how many of them are correlated.  I then would like to offer strategies to help combat these problems.  One strategy is to chart the menstrual cycle and use it for diagnosis and tailoring the treatment.  I will include a brief introduction to NaProTECHNOLOGY developed at the Pope Paul VI Institute in Omaha.',
+'Jerzy',
+'/Home/Article?id=2002',
+GETUTCDATE(),
+NULL,
+NULL)

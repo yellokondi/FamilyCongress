@@ -101,7 +101,7 @@ WHERE bt.BlogID = {0}";
 			SqlFuDao.ConnectionStringIs(connection, DbEngine.SqlServer);
 			using (DbConnection db = SqlFuDao.GetConnection())
 			{
-				retVal = db.Query<T>().ToList();
+				retVal = db.Query<T>(query).ToList();
 			}
 			return retVal;
 		}

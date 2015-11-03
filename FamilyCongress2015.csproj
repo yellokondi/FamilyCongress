@@ -202,6 +202,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\logo.css" />
+    <Content Include="Content\logo\KR_wbanner_1200x400.jpg" />
     <Content Include="Content\logo\logo_1.png" />
     <Content Include="Content\participants\Chuck_Thompson_lo.jpg" />
     <Content Include="Content\participants\Dr_Lawler_lo.jpg" />
@@ -837,6 +838,7 @@
     <Content Include="Views\Home\Registration.cshtml" />
     <Content Include="Views\Home\Sent.cshtml" />
     <Content Include="Views\Home\Workshops.cshtml" />
+    <Content Include="Views\Home\Donation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

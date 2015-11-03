@@ -9,9 +9,11 @@
 
   return "﻿<div class=\"container\">\r\n	<h2>"
     + alias3(((helper = (helper = helpers.Subject || (depth0 != null ? depth0.Subject : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Subject","hash":{},"data":data}) : helper)))
-    + "</h2>\r\n	<h3>"
+    + "</h2>\r\n	<h3>\r\n		<a href=\"/Home/Participants#"
     + alias3(((helper = (helper = helpers.Instructor || (depth0 != null ? depth0.Instructor : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Instructor","hash":{},"data":data}) : helper)))
-    + "</h3>\r\n	<div>\r\n		<div class=\"row\">\r\n			<div>\r\n				<h4>Place:</h4>\r\n				<p>"
+    + "\">"
+    + alias3(((helper = (helper = helpers.Instructor || (depth0 != null ? depth0.Instructor : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Instructor","hash":{},"data":data}) : helper)))
+    + "</a>\r\n	</h3>\r\n	<div>\r\n		<div class=\"row\">\r\n			<div>\r\n				<h4>Place:</h4>\r\n				<p>"
     + ((stack1 = ((helper = (helper = helpers.Place || (depth0 != null ? depth0.Place : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Place","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "</p><br />\r\n				<h4>Meets On</h4>\r\n				<p>"
     + ((stack1 = ((helper = (helper = helpers.MeetOn || (depth0 != null ? depth0.MeetOn : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"MeetOn","hash":{},"data":data}) : helper))) != null ? stack1 : "")
