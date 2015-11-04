@@ -12,20 +12,27 @@
 				<p>{{{MeetOn}}}</p><br />
 				<h4>Workshop Presentation</h4>
 				<p>{{{Definition}}}</p><br />
+				{{#if Description}}
 				<h4>Main Topic and Audience</h4>
 				<p>
 					{{{Description}}}
-				</p><br />
+				</p>
+				{{/if}}
+				<br />
 				<h4>Participation Rules</h4>
 				<p>
 					{{{Rules}}}
-				</p><br />
+				</p>
+				{{#if Help}}
+				<br />
 				<h4>Items Included</h4>
 				<p>
 					{{{Help}}}
-				</p><br />
+				</p>
+				{{/if}}
 				{{#if RegisterUrl}}
-				<a href="{{RegisterUrl}}" class="btn btn-lg btn-primary">Submit</a>
+				<br />
+				<a href="{{RegisterUrl}}" class="btn btn-lg btn-primary">Enroll Now</a>
 				{{/if}}
 			</div>
 		</div>

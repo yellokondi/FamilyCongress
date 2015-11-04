@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
 	ViewBag.Title = "Program";
 }
 
@@ -51,7 +50,7 @@
 				Wounded yet healed by love.
 			</td>
 			<td>
-				Fr. Michał Wyrzykowski
+				<a href="/Home/Participants#Father Michał Wyrzykowski">Father Michał Wyrzykowski</a>
 			</td>
 		</tr>
 		<tr>
@@ -69,7 +68,7 @@
 				Wounded yet healed by love.
 			</td>
 			<td>
-				Fr. Piotr Samborski
+				<a href="/Home/Participants#Father Piotr Samborski">Father Piotr Samborski</a>
 			</td>
 		</tr>
 		<tr>
@@ -87,7 +86,7 @@
 				Wounded yet healed by love.
 			</td>
 			<td>
-				Fr. Tomasz Oleniacz
+				<a href="/Home/Participants#Father Tomasz Oleniacz">Father Tomasz Oleniacz</a>
 			</td>
 		</tr>
 		<tr>
@@ -117,7 +116,7 @@
 				Wounded yet healed by love.
 			</td>
 			<td>
-				Fr. Romuald Jaworski
+				<a href="/Home/Participants#Father Romuald Jaworski">Father Romuald Jaworski</a>
 			</td>
 		</tr>
 		<tr>
@@ -130,10 +129,10 @@
 				Workshops for man, fathers part 1
 			</td>
 			<td>
-				Seven secrets of effective fatherhood Session I
+				<a href="@Url.Action("Workshops", "Home", new { labName = "Seven secrets of effective fatherhood Session I", subject = "Seven secrets of effective fatherhood", instructor = "Tato.net instructor" })">Seven secrets of effective fatherhood</a>
 			</td>
 			<td>
-				Tato-net
+				Tato.net instructor
 			</td>
 		</tr>
 		<tr>
@@ -150,10 +149,10 @@
 				Workshops
 			</td>
 			<td>
-				Bibliodrama: Family in Holly Bible – Holly Bible in family.
+				<a href="@Url.Action("Workshops", "Home", new { labName = "Bibliodrama: Family in the Bible – the Bible in the family", subject = "Bibliodrama: Family in the Bible – the Bible in the family", instructor = "Father Romuald Jaworski" })">Bibliodrama: Family in the Bible – the Bible in the family</a>
 			</td>
 			<td>
-				Fr. Romuald Jaworski
+				<a href="/Home/Participants#Father Romuald Jaworski">Father Romuald Jaworski</a>
 			</td>
 		</tr>
 		<tr>
@@ -166,7 +165,7 @@
 			</td>
 			<td>Workshops in English</td>
 			<td><a href="@Url.Action("Workshops", "Home", new { labName = "Hurt yet Healed in Love", subject = "Wounded yet healed by love. Combating the contraceptive mentality in modern society.", instructor = "Dr Robert Lawler" })">Wounded yet healed by love. Combating the contraceptive mentality in modern society.</a></td>
-			<td>Dr Robert Lawler</td>
+			<td><a href="/Home/Participants#Robert C. Lawler">Robert C. Lawler</a></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -175,48 +174,60 @@
 				Kings Hall Lombard
 			</td>
 			<td>Workshops for couples and married couples</td>
-			<td>Wounded yet healed by love.</td>
-			<td>Fr. Paweł Bandurski</td>
+			<td>
+				<a href="@Url.Action("Workshops", "Home", new { labName = "Wounded – healed in love", subject = "Wounded – healed in love", instructor = "Rev. Pawel Bandurski" })">Wounded – healed in love</a>
+			</td>
+			<td><a href="/Home/Participants#Rev. Pawel Bandurski">Rev. Pawel Bandurski</a></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>10am – 1pm</td>
 			<td>St. Hyacinth Basilica</td>
 			<td>Workshops</td>
-			<td>Forbidden sadness.</td>
-			<td>Sr. Maksymiliana</td>
+			<td>
+				<a href="@Url.Action("Workshops", "Home", new { labName = "Forbidden sadness", subject = "Forbidden sadness", instructor = "Sister Maksymiliana Kaminska" })">Forbidden sadness</a>
+			</td>
+			<td><a href="/Home/Participants#Sister Maksymiliana Kaminska">Sister Maksymiliana Kaminska</a></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>8am – 5pm</td>
 			<td>St. Daniel The Prophet Church</td>
 			<td>Workshops  for man, fathers part 2</td>
-			<td>Seven secrets of effective fatherhood Session II</td>
-			<td>Tato-net</td>
+			<td>
+				<a href="@Url.Action("Workshops", "Home", new { labName = "Seven secrets of effective fatherhood Session II", subject = "Seven secrets of effective fatherhood", instructor = "Tato.net instructor" })">Seven secrets of effective fatherhood</a>
+			</td>
+			<td>Tato.net instructor</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>9am – 1pm</td>
 			<td>St. Thomas Becket Church, Mt Prospect</td>
 			<td>Workshops</td>
-			<td>How to love, when tears are coming down (a few words about difficult love).</td>
-			<td>Małgorzata Olczak</td>
+			<td>
+				<a href="@Url.Action("Workshops", "Home", new { labName = "How to love when eyes are running tears, a few words about difficult love", subject = "How to love when eyes are running tears, a few words about difficult love", instructor = "Malgorzata Olczak" })">How to love when eyes are running tears, a few words about difficult love</a>
+			</td>
+			<td><a href="/Home/Participants#Malgorzata Olczak">Malgorzata Olczak</a></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>3pm – 7pm</td>
 			<td>St. Constance Church</td>
 			<td>Workshops</td>
-			<td>How to love when tears are coming down (a few words about difficult love).</td>
-			<td>Małgorzata Olczak</td>
+			<td>
+				<a href="@Url.Action("Workshops", "Home", new { labName = "How to love when eyes are running tears, a few words about difficult love", subject = "How to love when eyes are running tears, a few words about difficult love", instructor = "Malgorzata Olczak" })">How to love when eyes are running tears, a few words about difficult love</a>
+			</td>
+			<td><a href="/Home/Participants#Malgorzata Olczak">Malgorzata Olczak</a></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>4pm – 8pm</td>
 			<td>Shrine of the Sacred Heart Jesuit Millennium Center - Polish Jesuit Fathers</td>
 			<td>Workshops</td>
-			<td>Family conflicts in the light of Transactional Analysis.</td>
-			<td>Fr. Romuald Jaworski</td>
+			<td>
+				<a href="@Url.Action("Workshops", "Home", new { labName = "Family conflicts in the light of transactional analysis", subject = "Family conflicts in the light of transactional analysis", instructor = "Father Romuald Jaworski" })">Family conflicts in the light of transactional analysis</a>
+			</td>
+			<td><a href="/Home/Participants#Father Romuald Jaworski">Father Romuald Jaworski</a></td>
 		</tr>
 		<tr>
 			<td>Sunday, November 22nd</td>
@@ -228,15 +239,17 @@
 				Holy Mass - Conference (transmission via radio WCEV 1450 AM and1030 AM)
 			</td>
 			<td></td>
-			<td>Fr. Romuald Jaworski</td>
+			<td><a href="/Home/Participants#Father Romuald Jaworski">Father Romuald Jaworski</a></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>11am – 1pm</td>
 			<td>Shrine of the Sacred Heart Jesuit Millennium Center - Polish Jesuit Fathers</td>
 			<td>Panel</td>
-			<td>Finally alive. 12 steps toward living a full life.</td>
-			<td>Fr. Romuald Jaworski</td>
+			<td>
+				<a href="@Url.Action("Workshops", "Home", new { labName = "Live at last. 12 steps to the fullness of life", subject = "Live at last. 12 steps to the fullness of life", instructor = "Ks. Romuald Jaworski" })">Live at last. 12 steps to the fullness of life</a>
+			</td>
+			<td><a href="/Home/Participants#Father Romuald Jaworski">Father Romuald Jaworski</a></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -251,7 +264,7 @@
 			<td>
 				Archbishop Blase Cupich<br />
 				Fr. Robert Fedek<br />
-				Fr. Romuald Jaworski
+				<a href="/Home/Participants#Father Romuald Jaworski">Father Romuald Jaworski</a>
 			</td>
 		</tr>
 		<tr>
@@ -266,12 +279,31 @@
 			<td>
 				Workshops for married couples (three days in Mundelein)
 			</td>
-			<td>Marriage Encounter</td>
 			<td>
-				Halina i Jerzy Florczyk<br />
-				Fr. Paweł Witon
+				<a href="@Url.Action("Workshops", "Home", new { labName = "Retreat for Marriages", subject = "Retreat for Marriages", instructor = "Halina and Jerzy Florczyk and Father Pawel Witon" })">Retreat for Marriages</a>
+			</td>
+			<td>
+				<a href="/Home/Participants#Halina and Jerzy Florczyk">Halina and Jerzy Florczyk</a><br />
+				<a href="/Home/Participants#Father Pawel Witon">Father Pawel Witon</a>
 			</td>
 		</tr>
 	</tbody>
 </table>
-
+<p>
+	<br />
+	REGISTRATION FOR ALL WORKSHOPS (number of seats limited) can be done as follows:
+	<ul>
+		<li>
+			By internet: click on selected workshops and fill out the forms
+		</li>
+		<li>
+			In person: at the office of Jesuit Millennium Center (5835 W. Irving Park Rd., Chicago) during workdays from 3:30pm to 8:30pm and on Sundays after each Holy Mass.
+		</li>
+		<li>
+			By email: <a href="mailto:info@familycongresschicago.org">info@familycongresschicago.org</a>.
+		</li>
+	</ul>
+	The organizers kindly request a donation to the account of not-for-profit foundation Strong Family.<br />
+	We reserve the right to cancel workshops for reasons beyond our control – in such case, donations will be refunded.<br /><br />
+	If financial situation is the only reason preventing participation in any workshops, please contact the organizers and it will be resolved on case-to-case basis: <a href="mailto:info@familycongresschicago.org">info@familycongresschicago.org</a>
+</p>
