@@ -361,7 +361,7 @@ WHERE bt.BlogID = {0}";
 				smtp.Host = "smtp.familycongresschicago.org";
 				smtp.Port = 587;
 				smtp.EnableSsl = false;
-				//smtp.Send(message);
+				smtp.Send(message);
 				return RedirectToAction("Donation", "Home", new { fromRegistration = true });
 			}
 		}
