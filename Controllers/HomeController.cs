@@ -80,7 +80,7 @@ namespace FamilyCongress2015.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				SendFeedback(model);
+				return SendFeedback(model);
 			}
 			return View(model);
 		}
@@ -148,7 +148,7 @@ namespace FamilyCongress2015.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				SendRegistratioMessage(model);
+				return SendRegistratioMessage(model);
 			}
 			return View(model);
 		}
@@ -361,8 +361,8 @@ WHERE bt.BlogID = {0}";
 				smtp.Host = "smtp.familycongresschicago.org";
 				smtp.Port = 587;
 				smtp.EnableSsl = false;
-				smtp.Send(message);
-				return RedirectToAction("Donation", "Home", new { FromRegistration = true });
+				//smtp.Send(message);
+				return RedirectToAction("Donation", "Home", new { fromRegistration = true });
 			}
 		}
 
